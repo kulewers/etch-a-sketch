@@ -2,10 +2,14 @@
     width: 480px;
     height: 480px;
     border: 1px solid black;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
 }
 
 .blackBackGround {
     background-color: black;
+}
+
+.gridBlock {
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
