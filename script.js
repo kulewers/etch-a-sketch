@@ -15,9 +15,17 @@ function printGrid(size) {
         const block = document.createElement('div');
         block.classList.add('gridBlock');
         block.addEventListener('mouseover', function(e) {
-            const t = e.target;
-            t.classList.add('blackBackGround');
+                const t = e.target;
+                t.setAttribute('style', `${CSSrandomColor()}`)
         })
         gridBase.appendChild(block);
     }
+}
+
+function CSSrandomColor() {
+    let r = Math.floor(Math.random() * 255);
+    let b = Math.floor(Math.random() * 255);
+    let g = Math.floor(Math.random() * 255);
+    let cssProperty = `background-color: rgb(${r},${g},${b})`
+    return cssProperty;
 }
